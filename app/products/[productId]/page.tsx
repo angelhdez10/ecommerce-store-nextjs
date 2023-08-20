@@ -15,9 +15,8 @@ export const revalidate = 0;
 
 const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
   const product = await getProduct(params?.productId);
-  console.log(product?.category, "category");
   const suggestedProducts = await getProducts({
-    sizeId: product?.size?.id,
+    sizeId: product?.category?.id,
   });
   return (
     <div className="bg-white">
