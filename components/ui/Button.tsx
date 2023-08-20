@@ -24,6 +24,7 @@ transition`,
           className,
         )}
         {...props}
+        disabled={disabled}
       >
         {children}
       </button>
